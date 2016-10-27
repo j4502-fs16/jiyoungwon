@@ -3,7 +3,7 @@ html {
 }
 
 p {
-  font-family: "Merriweather", Georgia, "Times New Roman", serif;
+  font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
 }
@@ -41,23 +41,26 @@ img {
 }
 
 .header {
-  background: tomato;
+  background: lightyellow;
+  font-size: 1.5rem;
 }
 
 .footer {
-  background: lightgreen;
+  background: gray;
+  color: white;
+  font-size: 0.8em;
 }
 
 .main {
-  background: deepskyblue;
+  background: lightgreen;
 }
 
 .aside-1 {
-  background: gold;
+  background: lightblue;
 }
 
 .aside-2 {
-  background: hotpink;
+  background: lightpink;
 }
 
 .wrapper {
@@ -71,13 +74,13 @@ img {
   text-align: left
 }
 
-@media (min-width: 800px){
+@media (min-width: 700px){
     .navigation {
       flex-flow: row;
       justify-content: flex-end;
   }
     .navigation a:hover {
-      background: black;
+      background: lightgreen;
     }
     .aside {
       flex: 1 auto;
@@ -103,10 +106,13 @@ img {
     }
     img {
       width: 50%;
-      height: 50%;
+      height: 75%;
       margin-right: 10px;
     }
     .navigation a {
       border: none;
+    }
+    a img {
+      border: 0;
     }
 }
