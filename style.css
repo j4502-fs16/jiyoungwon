@@ -8,76 +8,105 @@ p {
   line-height: 1.5rem;
 }
 
-em {
-	font-style: italic;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
-}
-
-h1 {
-	font-size: 2.5rem;
-}
-
-h2 {
-	font-size: 1.5rem
-}
-
-body{
-  background-color:#ebe3ce;
-}
-
-#container{
-  width: 95%;
-  background-color:#ffffff;
-  margin: 0 auto;
-}
-
-.caption{
-  color:black;
-  font-family: "Merriweather", Georgia, "Times New Roman", serif;
-  font-size:0.8em;
-  font-style:italic;
-  margin-top:0;
-  text-align: left;
-}
-
-#nav {
+.navigation{
+  list-style: none;
+  background: gray;
+  margin:0;
   padding: 0;
+  display: flex;
+  flex-flow:column;
 }
 
-#nav li {
-  float: left;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 25%;
-}
-
-#nav a:link, a:visited {
+.navigation a{
+  text-decoration: none;
   display: block;
-  color: #ffffff;
-  background-color: #98bf21;
+  text-align:center;
+  color: white;
+  padding:10px;
+  border-top:1px solid black;
+  border-bottom:1px solid white;
+}
+
+.navigation li:last-of-type a{
+  border-bottom: none;
+}
+
+img {
+  width: 100%;
+}
+
+.header, .main, .aside, .footer{
+  flex: 1 100%;
+  padding: 10px;
+}
+
+.header {
+  background: tomato;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.main {
+  background: deepskyblue;
+}
+
+.aside-1 {
+  background: gold;
+}
+
+.aside-2 {
+  background: hotpink;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
   font-weight: bold;
   text-align: center;
-  text-decoration: none;
-  padding: 4px;
-  font-family: Helvetica, Arial, sans-serif;
 }
 
-#nav a:hover, a:active {
-  background-color: #7a991a;
+.main {
+  text-align: left
 }
 
-#footer{
-  color: white;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.8em;
-  border-top: 1px solid black;
-  background-color: #98bf21;
-}
-
-a img {
-  border: 0;
+@media (min-width: 800px){
+    .navigation {
+      flex-flow: row;
+      justify-content: flex-end;
+  }
+    .navigation a:hover {
+      background: black;
+    }
+    .aside {
+      flex: 1 auto;
+    }
+    .main {
+      flex: 3 0px;
+    }
+    .aside-1{
+      order:1;
+    }
+    .main{
+      order: 2;
+    }
+    .aside-2{
+      order: 3;
+    }
+    .footer{
+      order: 4;
+    }
+    .main {
+      display: flex;
+      flex-flow: row;
+    }
+    img {
+      width: 50%;
+      height: 50%;
+      margin-right: 10px;
+    }
+    .navigation a {
+      border: none;
+    }
 }
