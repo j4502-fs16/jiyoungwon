@@ -8,10 +8,15 @@ body{
 
 h2{
   color: white;
+  text-align: center;
 }
 
 h1{
   text-align: center;
+}
+
+a img {
+  border: 0;
 }
 
 #header, #nav, #footer, h1, h2, h3{
@@ -32,12 +37,14 @@ h1{
   background: #A7DBD8;
   color: white;
   padding: 10px;
+  text-align: center;
 }
 
 #sidebar2 .inner{
   background: #FFDBD8;
   color: white;
   padding: 10px;
+  text-align: center;
 }
 
 #nav ul{
@@ -72,13 +79,19 @@ h1{
   background: #A3A3A3;
   color:white;
   padding:10px;
+  font-size:0.6em;
+  text-align:right;
 }
 
 @media screen and (min-width:600px){
 
   p{
-    width: 100%;
+    width: 90%;
     margin: 1em auto;
+  }
+
+  #nav a:hover {
+    background:#A3A3A3;
   }
 
   #pageBody{
@@ -98,12 +111,17 @@ h1{
     border-right:none;
   }
 
+  a img {
+    border: 0;
+  }
+
 }
 
 @media screen and (min-width:1000px){
 
   p{
-    width: 100%;
+    width: 80%;
+    max-width: 60em;
     margin: 1em auto;
   }
 
@@ -112,13 +130,16 @@ h1{
     flex-flow:row;
   }
 
+  #nav a:hover {
+    background:#A3A3A3;
+  }
+
   #nav ul{
     display:flex;
     flex-flow:column;
   }
 
   #nav li{
-    border-right:none;
     border-bottom:1px solid rgba(255,255,255,.5);
   }
 
@@ -144,6 +165,11 @@ h1{
 
   #footer{
     order:4;
+    align-self: flex-end;
+  }
+
+  a img {
+    border: 0;
   }
 
 }
